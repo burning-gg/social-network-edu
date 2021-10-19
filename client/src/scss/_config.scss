@@ -1,0 +1,51 @@
+$primary-color: #17a2b8;
+$dark-color: #343a40;
+$light-color: #f4f4f4;
+$danger-color: #dc3545;
+$success-color: #28a745;
+$white-color: #fff;
+
+$border-radius: 5px;
+
+// Text colors
+$textColors: ('primary': $primary-color, 'dark': $dark-color);
+
+@each $text, $color in $textColors {
+  .text-#{$text} {
+    color: $color;
+  }
+}
+
+// Margin & padding classes
+.p {
+  padding: 0.5rem;
+}
+.py {
+  padding: 0.5rem 0;
+}
+
+.m {
+  margin: 0.5rem;
+}
+.my {
+  margin: 0.5rem 0;
+}
+
+$spaceamounts: (1, 2, 3);
+
+@each $space in $spaceamounts {
+    .m-#{$space} {
+        margin: #{$space}rem;
+    }
+    .my-#{$space} {
+        margin: #{$space}rem 0;
+    }
+
+    .p-#{$space} {
+        padding: #{$space}rem;
+    }
+    .py-#{$space} {
+        padding: #{$space}rem 0;
+    }
+}
+
